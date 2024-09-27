@@ -7,7 +7,4 @@ obj.data.list.forEach(item => {
         item.number = 42;  // 修改成你需要的值
     }
 });
-
-// 将修改后的对象转为 JSON 字符串
-body = JSON.stringify(obj);
 $done({body});
