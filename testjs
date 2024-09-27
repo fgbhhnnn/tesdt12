@@ -3,4 +3,4 @@ var body = { "msg": "获取成功", "data": { "flowerPrice": "0.1", "freeGoldLim
 
 var obj = JSON.stringify(body);
 // 返回修改后的响应体
-$done({ body });
+$done({ obj  });
