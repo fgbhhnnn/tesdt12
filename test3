@@ -1,0 +1,7 @@
+let headers = $request.headers;
+
+// 修改 sign 参数
+headers['sign'] = "FD78301D6366634CBDFDFFAE0E9694E1";  // 替换为你需要的签名值
+
+// 返回修改后的请求头
+$done({headers});
