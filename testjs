@@ -1,6 +1,4 @@
-var body = { "msg": "获取成功", "data": { "flowerPrice": "0.1", "freeGoldLimit": "99", "flowerExchangeRenameCard": "1000", "list": [{ "number": 0, "type": 1 }, { "number": 999, "type": 2 }, { "number": 59, "type": 3 }, { "number": 50, "type": 4 }], "flowerExchangeDeleteCommentCard": "20" }, "success": true, "version": "3.4.0" }
+var body = $response.body;
+var obj = JSON.parse(body);
 
-
-var obj = JSON.stringify(body);
-// 返回修改后的响应体
-$done({ obj  });
+console.log(obj);
