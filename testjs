@@ -1,13 +1,25 @@
-var body = $response.body;
-var obj = JSON.parse(body);
-console.log(obj)
-// 遍历 `list` 数组，找到 `type = 2` 的项并修改 `number`
-obj.data.list.forEach(item => {
-    if (item.type == 2) {
-        item.number = 42;  // 修改成你需要的值
-    }
-});
+try {
+    // 获取响应体并解析为 JSON 对象
+    var body = $response.body;
+    var obj = JSON.parse(body);
 
-// 将修改后的对象转为 JSON 字符串
-body = JSON.stringify(obj);
-$done({body});
+    // 打印原始对象（可选）
+    console.log("Original Response:", obj);
+
+    // 遍历 `list` 数组，修改 `type = 2` 的 `number`
+    obj.data.list.forEach(item => {
+        if (item.type === 2) {
+            item.number = 42;  // 修改为所需的值
+        }
+    });
+
+    // 将修改后的对象重新序列化为 JSON 字符串
+    body = JSON.stringify(obj);
+    
+} catch (error) {
+    // 错误处理：解析失败或处理时遇到异常
+    console.log("Error processing response:", error);
+}
+
+// 返回修改后的响应体
+$done({ body });
