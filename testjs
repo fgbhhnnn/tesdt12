@@ -1,1 +1,1 @@
-$.write(ck, '#kscookies');
+$.notify('快手果园获取cookie成功', '', '');
