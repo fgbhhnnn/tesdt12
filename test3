@@ -1,7 +1,14 @@
 let headers = $request.headers;
 
-// 修改 sign 参数
-headers['sign'] = "FD78301D6366634CBDFDFFAE0E9694E1";  // 替换为你需要的签名值
 
+function generateUUID() {
+    return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {
+        var r = Math.random() * 16 | 0;
+        var v = c === 'x' ? r : (r & 0x3 | 0x8);
+        return v.toString(16).toUpperCase(); // 转换为大写字母
+    });
+}
+// 修改 sign 参数
+headers['uuid'] = generateUUID();  // 替换为你需要的签名值
 // 返回修改后的请求头
 $done({headers});
