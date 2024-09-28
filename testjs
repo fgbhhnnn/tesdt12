@@ -1,6 +1,5 @@
 var body = $response.body;
 var obj = JSON.parse(body);
-obj.data.vip = 12
-obj.data.vipValidTime='2026-10-28 10:53:17'
+obj.data.ifYearVip = true
 body = JSON.stringify(obj);
 $done({body});
