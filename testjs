@@ -3,4 +3,4 @@ var obj = JSON.parse(body);
 obj.data.vip = 12
 obj.data.vipValidTime='2026-10-28 10:53:17'
 body = JSON.stringify(obj);
-$done({obj});
+$done({body});
