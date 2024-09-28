@@ -1,5 +1,7 @@
 var body = $response.body;
 var obj = JSON.parse(body);
 obj.data.ifYearVip = true
+obj.data.yearVipFlag = 2
+obj.data.statisticsTypeId = 2
 body = JSON.stringify(obj);
 $done({body});
