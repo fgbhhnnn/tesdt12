@@ -10,7 +10,7 @@ obj.data.contestList = obj.data.contestList.filter(item => {
 // 写入文件
 $file.write({
   path: 'file.txt',
-  data: obj.data.contestList,
+  data: JSON.stringify(obj.data.contestList),
 }).then(() => {
   console.log('数据成功保存到本地');
 }).catch((error) => {
