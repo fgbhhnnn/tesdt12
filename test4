@@ -4,7 +4,7 @@ var body = $response.body;
 var obj = JSON.parse(body);
 
 obj.data.contestList = obj.data.contestList.filter(item => {
-    return item.periods == 274 && item.countFailNow > 1
+    return item.periods == 274 
 })
 
 
